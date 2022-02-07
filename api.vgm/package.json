@@ -5,5 +5,8 @@
   "main": "server.js",
   "repository": "https://github.com/ImJustLucas/VeryGoodMuscle",
   "author": "VeryGoodTeam",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
