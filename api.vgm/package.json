@@ -1,0 +1,9 @@
+{
+  "name": "api.vgm",
+  "version": "1.0.0",
+  "description": "API of the VeryGoodMuscle Application",
+  "main": "server.js",
+  "repository": "https://github.com/ImJustLucas/VeryGoodMuscle",
+  "author": "VeryGoodTeam",
+  "license": "MIT"
+}
