@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "VeryGoodMuscle",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
