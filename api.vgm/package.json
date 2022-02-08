@@ -6,6 +6,10 @@
   "repository": "https://github.com/ImJustLucas/VeryGoodMuscle",
   "author": "VeryGoodTeam",
   "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server.js"
+  },
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
