@@ -1,11 +1,27 @@
-const http = require("http");
+const express = require("express");
+const dotenv = require("dotenv");
+const morgan = require("morgan");
 
-const server = http.createServer((req, res) => {
-  const { headers, url, method } = req;
-  console.log(headers, url, method);
-  res.end();
-});
+//Route files
+const users = require("./routes/users");
 
-const PORT = 5000;
+//Load env vars
+dotenv.config({ path: "./config/config.env" });
 
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const app = express();
+
+// Dev logging middleware
+
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
+
+//Mout routers
+app.use("/api/v1/users", users);
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(
+  PORT,
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+);
