@@ -1,46 +1,64 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Tab 1 </ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Hello</ion-title>
-    </ion-toolbar>
-    <ion-toolbar>
-      <ion-title size="large">Cyril.</ion-title>
-    </ion-toolbar>
+    <div class="header-title">Hello Cyril.</div>
   </ion-header>
 
-  <div id="cards-container">
-    <ion-card class="one">
-      <div class="card-home">
-        <p class="title-home">
-          <ion-icon
-            class="icon-menu"
-            size="large"
-            name="walk-outline"
-          ></ion-icon
-          >Walking
-        </p>
-      </div>
-    </ion-card>
+  <div class="push-days">
+    <div class="push-days__notif">
+      <ion-icon size="large" name="information-circle-outline"></ion-icon>
+      Vous n'avez pas pratiqué depuis 4 jours.
+    </div>
+  </div>
 
-    <ion-card>
-      <div class="card-home">
-        <p class="title-home">
-          <ion-icon
-            class="icon-menu"
-            size="large"
-            name="flash-outline"
-          ></ion-icon
-          >Exercises
-        </p>
-      </div>
+  <p class="home-date">Aujourd'hui</p>
+
+  <div id="cards-container">
+
+    <ion-card color="primary">
+      <ion-card-header>
+        <ion-card-subtitle
+          ><ion-icon name="walk-outline" size="medium"></ion-icon
+          >marche</ion-card-subtitle
+        >
+        <ion-card-title>2,456 <span class="card-title__span">pas</span></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="../../../assets/images/square_up.svg" alt="" />
+      </ion-card-content>
     </ion-card>
-    <ion-card></ion-card>
-    <ion-card></ion-card>
+    <ion-card color="primary">
+      <ion-card-header>
+        <ion-card-subtitle
+          ><ion-icon name="flame-outline"></ion-icon>calories</ion-card-subtitle
+        >
+        <ion-card-title>2,456 <span class="card-title__span">cal</span></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="../../../assets/images/stat-up.svg" alt="" />
+      </ion-card-content>
+    </ion-card>
+    <ion-card color="danger">
+      <ion-card-header>
+        <ion-card-subtitle
+          ><ion-icon name="barbell-outline" size="medium"></ion-icon
+          >sports</ion-card-subtitle
+        >
+        <ion-card-title>20 <span class="card-title__span">ex</span></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="../../../assets/images/stretching.svg" alt="" />
+      </ion-card-content>
+    </ion-card>
+    
+    <button>
+      <ion-icon name="add-circle-outline"></ion-icon>
+
+    </button>
   </div>
 </ion-content>
