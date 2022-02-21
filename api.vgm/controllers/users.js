@@ -1,11 +1,9 @@
-// const User = require("../models/User");
+const User = require("../models/Users");
 
 //@desc     Get all user
 //@Routes   GET /api/v1/users
 //@access   Public
-exports.getUsers = (req, res, next) => {
-  // res.status(200).json({ success: true, msg: "Show all users" });
-
+exports.getUsers = async (req, res, next) => {
   try {
     const users = await User.find();
     res.status(200).json({ success: true, data: users });
@@ -19,9 +17,7 @@ exports.getUsers = (req, res, next) => {
 //@desc     Get one user by Id
 //@Routes   GET /api/v1/users/:id
 //@access   Public
-exports.getUser = (req, res, next) => {
-  // res.status(200).json({ success: true, msg: `get user ${req.params.id}` });
-
+exports.getUser = async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id);
 
