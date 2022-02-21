@@ -4,16 +4,10 @@ const UserSchema = new mongoose.Schema({
   last_name: {
     type: String,
     required: [true, "Please add a last name"],
-    unique: true,
-    trim: true,
-    maxlength: [50, "Name can not be more than 50 characters"],
   },
   first_name: {
     type: String,
     required: [true, "Please add a first name"],
-    unique: true,
-    trim: true,
-    maxlength: [50, "Name can not be more than 50 characters"],
   },
   email: {
     type: String,
@@ -28,13 +22,17 @@ const UserSchema = new mongoose.Schema({
     minlength: 6,
     select: false,
   },
+  slug: String,
   birthdate: {
-    type: Date,
-    required: [true, "Please add a birthdate"],
+    type: String,
+    match: [
+      /^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/,
+      "Please add a birthdate",
+    ],
   },
   height: {
-    type: Number,
-    required: [false],
+    type: String,
+    match: [/^\d+$/, "Please add a height in cm"],
   },
   gender: {
     type: Boolean,

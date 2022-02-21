@@ -37,9 +37,10 @@ exports.getUser = async (req, res, next) => {
 };
 
 // @desc    Create new user
-// @route   POST /api/v1/users/:id
+// @route   POST /api/v1/users
 // @access  Private
 exports.createUser = async (req, res, next) => {
+ console.log(req.body);
   try {
     const user = await User.create(req.body);
     res.status(201).json({
@@ -49,7 +50,7 @@ exports.createUser = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       success: false,
-      msg: "Server error",
+      msg: err,
     });
   }
 };
