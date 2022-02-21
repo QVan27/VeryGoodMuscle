@@ -40,7 +40,7 @@ exports.getUser = async (req, res, next) => {
 // @route   POST /api/v1/users
 // @access  Private
 exports.createUser = async (req, res, next) => {
- console.log(req.body);
+  console.log(req.body);
   try {
     const user = await User.create(req.body);
     res.status(201).json({

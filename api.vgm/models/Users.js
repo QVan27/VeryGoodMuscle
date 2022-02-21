@@ -25,10 +25,7 @@ const UserSchema = new mongoose.Schema({
   slug: String,
   birthdate: {
     type: String,
-    match: [
-      /^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/,
-      "Please add a birthdate",
-    ],
+    match: [/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/, "Please add a birthdate"],
   },
   height: {
     type: String,
