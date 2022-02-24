@@ -1,0 +1,83 @@
+#profil-page{
+    display: flex;
+    height: 45%;
+    color: #fff;
+    .tm-header{
+        width: 100vw;
+        height: 100%;
+        background-color: var(--ion-color-primary);
+
+        ion-icon{
+            width: 30px;
+            height: 30px;
+            color: #fff
+        }
+        .profil-picture{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #4938FF;
+            box-shadow:  14px 14px 42px #261d85,
+                        -14px -14px 42px #6c53ff;
+        }
+        ion-label{
+            color: #fff;
+        }
+        .tm-flex-box-custom1{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 20px;
+            align-items: baseline;
+        }
+    }
+}
+
+.tm-wrap-contain{
+    width: 90%;
+    margin: auto auto;
+    padding: auto auto;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+
+        .box{
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .img{
+            width: 49%;
+            height: 172px;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 5px;
+            
+            
+            p{
+                background-color: rgba(44, 62, 80,0.8);
+                width: 100%;
+                padding: 10px 0;
+                margin: 0 0 0 0;
+                color: #fff;
+                font-size: 18px;
+                border-radius: 0 0 5px 5px;
+                text-indent: 10px; 
+            }
+        }
+        .img-1{
+            background-image: url(../../../assets/images/images-Sport/1.jpg);
+        }
+        .img-2{
+            background-image: url(../../../assets/images/images-Sport/3.jpg);
+        }
+        .img-3{
+            background-image: url(../../../assets/images/images-Sport/5.jpg);
+        }
+        .img-4{
+            background-image: url(../../../assets/images/images-Sport/4.jpg);
+        }
+    }
+}
+
+
