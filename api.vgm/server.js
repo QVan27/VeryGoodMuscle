@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const colors = require("colors");
+const errorHandler = require("./middleware/error");
 const connectDb = require("./config/db");
 
 //Load env vars
@@ -14,6 +15,8 @@ connectDb();
 const users = require("./routes/users");
 
 const app = express();
+
+app.use(errorHandler);
 
 // Body parser
 app.use(express.json());
