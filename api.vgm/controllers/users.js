@@ -7,11 +7,9 @@ const User = require("../models/Users");
 exports.getUsers = async (req, res, next) => {
   try {
     const users = await User.find();
-    res.status(200).json({ success: true, data: users });
+    res.status(200).json({ success: true, count: users.length, data: users });
   } catch (err) {
-    res.status(400).json({
-      success: false,
-    });
+    next(err);
   }
 };
 
@@ -24,7 +22,7 @@ exports.getUser = async (req, res, next) => {
 
     if (!user) {
       return next(
-        new ErrorResponse(`Bootcamp not found with id of ${req.params.id}`, 404)
+        new ErrorResponse(`User not found with id of ${req.params.id}`, 404)
       );
     }
 
@@ -33,7 +31,7 @@ exports.getUser = async (req, res, next) => {
       data: user,
     });
   } catch (err) {
-    next(new ErrorResponse(`User not found with id of ${req.params.id}`, 404));
+    next(err);
   }
 };
 
@@ -41,7 +39,6 @@ exports.getUser = async (req, res, next) => {
 // @route   POST /api/v1/users
 // @access  Private
 exports.createUser = async (req, res, next) => {
-  console.log(req.body);
   try {
     const user = await User.create(req.body);
     res.status(201).json({
@@ -49,10 +46,7 @@ exports.createUser = async (req, res, next) => {
       data: user,
     });
   } catch (err) {
-    res.status(400).json({
-      success: false,
-      msg: err,
-    });
+    next(err);
   }
 };
 
@@ -60,24 +54,42 @@ exports.createUser = async (req, res, next) => {
 // @route   PUT /api/v1/users/:id
 // @access  Private
 exports.updateUser = async (req, res, next) => {
-  const user = await User.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-    runValidators: true,
-  });
+  try {
+    const user = await User.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
 
-  if (!user) {
-    return res.status(400).json({ success: false });
+    if (!user) {
+      return next(
+        new ErrorResponse(`User not found with id of ${req.params.id}`, 404)
+      );
+    }
+
+    res.status(200).json({ success: true, data: user });
+  } catch (err) {
+    next(err);
   }
-
-  res.status(200).json({ success: true, data: user });
 };
 
 // @desc    Delete user
 // @route   DELETE /api/v1/users/:id
 // @access  Private
 exports.deleteUser = (req, res, next) => {
-  res.status(200).json({
-    success: true,
-    msg: `delete user with id ${req.params.id}`,
-  });
+  try {
+    const user = await User.findByIdAndDelete(req.params.id);
+
+    if (!user) {
+      return next(
+        new ErrorResponse(`User not found with id of ${req.params.id}`, 404)
+      );
+    }
+
+    res.status(200).json({
+      success: true,
+      msg: `delete user with id ${req.params.id}`,
+    });
+  } catch (err) {
+    next(err);
+  }
 };
