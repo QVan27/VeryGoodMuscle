@@ -1,14 +1,25 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
-
-//Route files
-const users = require("./routes/users");
+const colors = require("colors");
+const errorHandler = require("./middleware/error");
+const connectDb = require("./config/db");
 
 //Load env vars
 dotenv.config({ path: "./config/config.env" });
 
+// Connect to database
+connectDb();
+
+//Route files
+const users = require("./routes/users");
+
 const app = express();
+
+app.use(errorHandler);
+
+// Body parser
+app.use(express.json());
 
 // Dev logging middleware
 
