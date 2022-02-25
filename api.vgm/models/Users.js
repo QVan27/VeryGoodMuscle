@@ -2,6 +2,12 @@ const mongoose = require("mongoose");
 const slugify = require("slugify");
 
 const UserSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: [true, "Please add a username"],
+    unique: true,
+    trim: true,
+  },
   last_name: {
     type: String,
     required: [true, "Please add a last name"],
@@ -44,7 +50,7 @@ const UserSchema = new mongoose.Schema({
 
 //Create user slug from name
 BootcampSchema.pre("save", function (next) {
-  this.slug = slugify(this.name, { lower: true });
+  this.slug = slugify(this.username, { lower: true });
   next();
 });
 
