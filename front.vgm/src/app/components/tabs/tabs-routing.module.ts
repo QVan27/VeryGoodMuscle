@@ -20,6 +20,18 @@ const routes: Routes = [
         loadChildren: () => import('../../pages/profil/profil.module').then(m => m.ProfilPageModule)
       },
       {
+        path: 'login',
+        loadChildren: () => import('../../pages/login/login.module').then(m => m.LoginPageModule)
+      },
+      {
+        path: 'sign-up',
+        loadChildren: () => import('../../pages/sign-up/sign-up.module').then(m => m.SignUpPageModule)
+      },
+      {
+        path: 'forgot-password',
+        loadChildren: () => import('../../pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule)
+      },
+      {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full'
