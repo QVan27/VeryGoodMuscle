@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const slugify = require("slugify");
 
 const UserSchema = new mongoose.Schema({
   last_name: {
@@ -39,6 +40,12 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+});
+
+//Create user slug from name
+BootcampSchema.pre("save", function (next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
 });
 
 module.exports = mongoose.model("User", UserSchema);
