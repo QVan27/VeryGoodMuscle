@@ -17,7 +17,20 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('./pages/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'programme',
+    loadChildren: () => import('./pages/programme/programme.module').then( m => m.ProgrammePageModule)
+  },
+  {
+    path: 'exercices',
+    loadChildren: () => import('./pages/exercices/exercices.module').then( m => m.ExercicesPageModule)
+  },
+  {
+    path: 'exercice-detail',
+    loadChildren: () => import('./pages/exercice-detail/exercice-detail.module').then( m => m.ExerciceDetailPageModule)
   }
+
 
 
 
