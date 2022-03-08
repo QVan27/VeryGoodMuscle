@@ -13,6 +13,7 @@ connectDb();
 
 //Route files
 const users = require("./routes/users");
+const exercices = require("./routes/exercices");
 
 const app = express();
 
@@ -29,6 +30,7 @@ if (process.env.NODE_ENV === "development") {
 
 //Mout routers
 app.use("/api/v1/users", users);
+app.use("/api/v1/exercices", exercices);
 
 const PORT = process.env.PORT || 5000;
 

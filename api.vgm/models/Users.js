@@ -49,7 +49,7 @@ const UserSchema = new mongoose.Schema({
 });
 
 //Create user slug from name
-BootcampSchema.pre("save", function (next) {
+UserSchema.pre("save", function (next) {
   this.slug = slugify(this.username, { lower: true });
   next();
 });
