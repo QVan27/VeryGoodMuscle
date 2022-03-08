@@ -1,3 +1,30 @@
 <ion-content [fullscreen]="true">
-  <h1>Exercice</h1>
+  <ion-header collapse="condense">
+    <div class="header-title">Exercices.</div>
+  </ion-header>
+  
+  <div id="cards-container">
+    <div class="content-card">
+      <ion-card color="primary" routerLink="/programme">
+        <img src="../../../assets/images/images-Sport/1.jpg"  alt=""/>
+        <ion-card-header>
+          <ion-card-title>Programmes</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Tu vas pouvoir consulter ton programme a suivre durant ton entrainement.
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="content-card">
+      <ion-card color="danger" routerLink="/exercice-detail">
+        <img src="../../../assets/images/images-Sport/3.jpg"  alt=""/>
+        <ion-card-header>
+          <ion-card-title>Exercices</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Tu vas pouvoir consulter les exercices de ton choix.
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
 </ion-content>
