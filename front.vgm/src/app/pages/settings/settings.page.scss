@@ -1,0 +1,12 @@
+ion-content{
+    .div1{
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a ion-icon{
+        height: 40px;
+        width: 40px;
+    }
+}

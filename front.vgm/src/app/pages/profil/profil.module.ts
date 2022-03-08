@@ -7,6 +7,7 @@ import { ProfilPage } from './profil.page';
 import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
 
 import { ProfilPageRoutingModule } from './profil-routing.module';
+import { Health } from '@awesome-cordova-plugins/health/ngx';
 
 @NgModule({
   imports: [
@@ -17,6 +18,8 @@ import { ProfilPageRoutingModule } from './profil-routing.module';
     RouterModule.forChild([{ path: '', component: ProfilPage }]),
     ProfilPageRoutingModule,
   ],
-  declarations: [ProfilPage]
+  declarations: [ProfilPage],
+  providers: [Health]
 })
 export class ProfilPageModule {}
+

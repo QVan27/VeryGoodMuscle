@@ -1,0 +1,18 @@
+ion-content .div1 {
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ion-content a ion-icon {
+  height: 40px;
+  width: 40px;
+}
+/*# sourceMappingURL=settings.page.css.map */

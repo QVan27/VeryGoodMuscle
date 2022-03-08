@@ -1,0 +1,14 @@
+.header-title {
+  padding: 30px 3% 10px 3%;
+  color: var(--ion-color-light-contrast);
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1em;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+ion-ca {
+  margin-bottom: 50px;
+}
+/*# sourceMappingURL=exercices.page.css.map */

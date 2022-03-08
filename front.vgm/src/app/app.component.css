@@ -1,0 +1,10 @@
+#profil-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#profil-page .tm-header {
+  background-color: lime !important;
+}
+/*# sourceMappingURL=app.component.css.map */

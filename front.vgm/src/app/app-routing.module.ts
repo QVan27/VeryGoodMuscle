@@ -29,7 +29,12 @@ const routes: Routes = [
   {
     path: 'exercice-detail',
     loadChildren: () => import('./pages/exercice-detail/exercice-detail.module').then( m => m.ExerciceDetailPageModule)
-  }
+  },  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+  },
+
+
 
 
 

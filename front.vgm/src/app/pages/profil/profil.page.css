@@ -1,0 +1,102 @@
+#profil-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 45%;
+  color: #fff;
+}
+
+#profil-page .tm-header {
+  width: 100vw;
+  height: 100%;
+  background-color: var(--ion-color-primary);
+}
+
+#profil-page .tm-header ion-icon {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+#profil-page .tm-header .profil-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+#profil-page .tm-header ion-label {
+  color: #fff;
+}
+
+#profil-page .tm-header .tm-flex-box-custom1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 20px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.tm-wrap-contain {
+  width: 90%;
+  margin: auto auto;
+  padding: auto auto;
+}
+
+.tm-wrap-contain .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tm-wrap-contain .container .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.tm-wrap-contain .container .img {
+  width: 49%;
+  height: 172px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 5px;
+}
+
+.tm-wrap-contain .container .img p {
+  background-color: rgba(44, 62, 80, 0.8);
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 0 0 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 0 0 5px 5px;
+  text-indent: 10px;
+}
+
+.tm-wrap-contain .container .img-1 {
+  background-image: url(../../../assets/images/images-Sport/1.jpg);
+}
+
+.tm-wrap-contain .container .img-2 {
+  background-image: url(../../../assets/images/images-Sport/3.jpg);
+}
+
+.tm-wrap-contain .container .img-3 {
+  background-image: url(../../../assets/images/images-Sport/5.jpg);
+}
+
+.tm-wrap-contain .container .img-4 {
+  background-image: url(../../../assets/images/images-Sport/4.jpg);
+}
+/*# sourceMappingURL=profil.page.css.map */

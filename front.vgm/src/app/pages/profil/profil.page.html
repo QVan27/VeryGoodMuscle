@@ -4,13 +4,12 @@
       <ion-row class="tm-header ion-align-items-center">
         <ion-grid>
           <div class="tm-flex-box-custom1">
-            <a href="./home">
+            <a [routerLink]="['/home']">
               <ion-icon name="arrow-back-outline"></ion-icon>
             </a>
-            <ion-chip>
-              <ion-icon name="add-outline"></ion-icon>
-                <ion-label>Suivre</ion-label>
-            </ion-chip>
+            <a [routerLink]="['/settings']">
+              <ion-icon name="settings-outline"></ion-icon>
+            </a>
           </div>
           <ion-row class="ion-text-center">
             <ion-col class="ion-align-items-center">
