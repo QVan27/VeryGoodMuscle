@@ -35,6 +35,8 @@ export class ProfilPage {
       console.log(err, "Erreurururururu")
     });
 
+
+    
   // var myHeaders = new Headers();
   // myHeaders.append("Content-Type", "application/json");
   
