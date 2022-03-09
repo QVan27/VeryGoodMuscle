@@ -12,6 +12,10 @@ const ExerciceSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please add a category"],
   },
+  difficulty: {
+    type: String,
+    required: [true, "Please add a difficulty"],
+  },
   content: {
     type: String,
     required: [true, "Please add some content"],

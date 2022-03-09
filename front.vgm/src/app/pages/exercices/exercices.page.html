@@ -1,17 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Exercise</ion-title>
-    </ion-toolbar>
+    <div class="header-title">Exercices.</div>
   </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  
+  <div id="cards-container">
+    <div class="content-card">
+      <ion-card color="primary" routerLink="/programme">
+        <img src="../../../assets/images/images-Sport/1.jpg"  alt=""/>
+        <ion-card-header>
+          <ion-card-title>Programmes</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Tu vas pouvoir consulter ton programme a suivre durant ton entrainement.
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="content-card">
+      <ion-card color="danger" routerLink="/exercice-detail">
+        <img src="../../../assets/images/images-Sport/3.jpg"  alt=""/>
+        <ion-card-header>
+          <ion-card-title>Exercices</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Tu vas pouvoir consulter les exercices de ton choix.
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
 </ion-content>
