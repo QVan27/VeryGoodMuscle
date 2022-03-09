@@ -55,7 +55,36 @@
       </ion-row>
     </div>
     <div class="tm-wrap-contain">
-      <h1>Séance de sports</h1>
+      <h1>Objectifs</h1>
+      <p>Combien de séance vous voulez faire par semaines ?</p>
+
+      <div class="slidecontainer">
+        
+        <input type="range" min="0" max="7" value="3" class="slider" id="myRange">
+        <div class="sizinginputnumber">
+          <span>0</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+        </div>
+      </div>
+      <h1>Mes Informations</h1>
+      <ion-item>
+        <ion-label position="fixed">Poids (kg)</ion-label>
+        <ion-input type="number" value="75"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Taille (cm)</ion-label>
+        <ion-input type="number" value="170"></ion-input>
+      </ion-item>
+
+      <h1>Calendrier</h1>
+      <ion-datetime id="calendar" first-day-of-week="1" dayValues={{seance}}></ion-datetime>
+      <h1>Derniére séance</h1>
       <div class="container">
         <div class="img img-1 box">
           <!-- 1 er carré image avec 1IMG -->

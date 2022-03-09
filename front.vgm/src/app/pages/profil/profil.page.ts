@@ -8,26 +8,18 @@ import { Health } from '@awesome-cordova-plugins/health/ngx';
 })
 export class ProfilPage {
 
-  constructor(private health: Health) {
+  seance = "2,4,6"
 
-    this.health.isAvailable()
-    .then((available:boolean) => {
-      console.log(available);
-      this.health.requestAuthorization([
-        'distance', 'nutrition',  //read and write permissions
-        {
-          read: ['steps'],       //read only permission
-          write: ['height', 'weight']  //write only permission
-        }
-      ])
-      .then(res => console.log(res))
-      .catch(e => console.log(e));
-    })
-    .catch(e => console.log(e));
-    console.log(this.health)
-   }
+  constructor() {
+  }
 
-  
+  ngOnInit(){
+    var calendrier = document.getElementById("calendar")
+    var DateNow = new Date
+    var Month = DateNow.getFullYear()+'-0'+(DateNow.getMonth()+1)+'-00';
+    calendrier.setAttribute("min", Month)
+    var Month = DateNow.getFullYear()+'-0'+(DateNow.getMonth()+2)+'-00';
+    calendrier.setAttribute("max", Month)
+    console.log(Month)
+  }
 }
-
-
