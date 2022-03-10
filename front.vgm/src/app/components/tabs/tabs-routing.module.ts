@@ -9,49 +9,78 @@ const routes: Routes = [
     children: [
       {
         path: 'home',
-        loadChildren: () => import('../../pages/home/home.module').then(m => m.HomePageModule)
+        loadChildren: () =>
+          import('../../pages/home/home.module').then((m) => m.HomePageModule),
       },
       {
         path: 'exercices',
-        loadChildren: () => import('../../pages/exercices/exercices.module').then(m => m.ExercicesPageModule)
+        loadChildren: () =>
+          import('../../pages/exercices/exercices.module').then(
+            (m) => m.ExercicesPageModule
+          ),
       },
       {
         path: 'profil',
-        loadChildren: () => import('../../pages/profil/profil.module').then(m => m.ProfilPageModule)
+        loadChildren: () =>
+          import('../../pages/profil/profil.module').then(
+            (m) => m.ProfilPageModule
+          ),
       },
       {
         path: 'login',
-        loadChildren: () => import('../../pages/login/login.module').then(m => m.LoginPageModule)
+        loadChildren: () =>
+          import('../../pages/login/login.module').then(
+            (m) => m.LoginPageModule
+          ),
       },
+      // {
+      //   path: 'intro',
+      //   loadChildren: () =>
+      //     import('../../pages/intro/intro.module').then(
+      //       (m) => m.IntroPageModule
+      //     ),
+      // },
       {
         path: 'sign-up',
-        loadChildren: () => import('../../pages/sign-up/sign-up.module').then(m => m.SignUpPageModule)
+        loadChildren: () =>
+          import('../../pages/sign-up/sign-up.module').then(
+            (m) => m.SignUpPageModule
+          ),
       },
       {
         path: 'forgot-password',
-        loadChildren: () => import('../../pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule)
+        loadChildren: () =>
+          import('../../pages/forgot-password/forgot-password.module').then(
+            (m) => m.ForgotPasswordPageModule
+          ),
       },
       {
         path: 'programme',
-        loadChildren: () => import('../../pages/programme/programme.module').then(m => m.ProgrammePageModule)
+        loadChildren: () =>
+          import('../../pages/programme/programme.module').then(
+            (m) => m.ProgrammePageModule
+          ),
       },
       {
         path: 'exercice-detail',
-        loadChildren: () => import('../../pages/exercice-detail/exercice-detail.module').then(m => m.ExerciceDetailPageModule)
+        loadChildren: () =>
+          import('../../pages/exercice-detail/exercice-detail.module').then(
+            (m) => m.ExerciceDetailPageModule
+          ),
       },
-      
+
       {
         path: '',
         redirectTo: '/home',
-        pathMatch: 'full'
-      }
-    ]
+        pathMatch: 'full',
+      },
+    ],
   },
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  }
+  // {
+  //   path: '',
+  //   redirectTo: '/login',
+  //   pathMatch: 'full',
+  // },
 ];
 
 @NgModule({
