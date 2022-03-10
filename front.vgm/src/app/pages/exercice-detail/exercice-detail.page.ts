@@ -22,7 +22,7 @@ export class ExerciceDetailPage implements OnInit {
     const exercice_number = document.getElementById("exercice_name");
     const exercice_image = document.getElementById("exercice_img");
     let data = ['Pompes', 'Squat', 'Planche', 'Dips', 'Crunch', 'Fentes']
-    var number_exercice = Math.floor(Math.random() * 3);
+    var number_exercice = Math.floor(Math.random() * 6);
     exercice_number.textContent = data[number_exercice]
     
     switch(number_exercice){
