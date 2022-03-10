@@ -24,7 +24,7 @@
 
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Devdactic App</ion-title>
+    <ion-title>Very Good Muscle</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -42,8 +42,8 @@
         *ngIf="(email.dirty || email.touched) && email.errors"
         class="errors"
       >
-        <span *ngIf="email.errors?.required">Email is required</span>
-        <span *ngIf="email.errors?.email">Email is invalid</span>
+        <span *ngIf="email.errors?.required">Email est obligatoire</span>
+        <span *ngIf="email.errors?.email">Email est invalide</span>
       </div>
       <ion-item>
         <ion-input
@@ -56,27 +56,20 @@
         *ngIf="(password.dirty || password.touched) && password.errors"
         class="errors"
       >
-        <span *ngIf="password.errors?.required">Password is required</span>
+        <span *ngIf="password.errors?.required">Mot de passe obligatoire</span>
         <span *ngIf="password.errors?.minlength"
-          >Password needs to be 6 characters</span
+          >Le mot de passe doit contenir 6 caractères</span
         >
       </div>
     </div>
 
     <ion-button type="submit" expand="block" [disabled]="!credentials.valid"
-      >Log in</ion-button
+      >Connexion</ion-button
     >
     <ion-button type="button" expand="block" color="light" fill="clear"
-      >Not yet a member? Sign up!
+      >Pas inscrit? Créer ton compte
     </ion-button>
 
-    <ion-button type="button" expand="block" color="tertiary">
-      <ion-icon name="logo-google" slot="start"></ion-icon>
-      Sign in with Google
-    </ion-button>
-    <ion-button type="button" expand="block" color="tertiary">
-      <ion-icon name="logo-apple" slot="start"></ion-icon>
-      Sign in with Apple
-    </ion-button>
+   
   </form>
 </ion-content>
