@@ -15,8 +15,7 @@ export class ProfilPage {
   id = '6213b3432d12baf306841b20';
 
   constructor(public userMethod: UsersService) {
-    // @ts-ignore
-    // this.getAllUsers();
+
   }
 
   ngOnInit() {
