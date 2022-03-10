@@ -446,7 +446,7 @@
   "resolved" "https://registry.npmjs.org/@assemblyscript/loader/-/loader-0.10.1.tgz"
   "version" "0.10.1"
 
-"@awesome-cordova-plugins/core@^5.1.0":
+"@awesome-cordova-plugins/core@^5.1.0", "@awesome-cordova-plugins/core@^5.40.0":
   "integrity" "sha512-tk5QlnXfSE2Zu3mJVC3f11Guu5iqnLtNkvvClNHjz/e4FsJEmprfXWCv/QImWs5fLsismHcn31LKYBfWIhOv9g=="
   "resolved" "https://registry.npmjs.org/@awesome-cordova-plugins/core/-/core-5.40.0.tgz"
   "version" "5.40.0"
