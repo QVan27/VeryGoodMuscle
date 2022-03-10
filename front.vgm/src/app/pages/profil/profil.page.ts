@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { AuthenticationService } from '../../services/authentication.service';
+import { Router } from '@angular/router';
 import { UsersService } from '../../services/users.service';
 //@ts-ignore
 @Component({
@@ -14,9 +15,11 @@ export class ProfilPage {
 
   id = '6213b3432d12baf306841b20';
 
-  constructor(public userMethod: UsersService) {
-
-  }
+  constructor(
+    public userMethod: UsersService,
+    private authService: AuthenticationService,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
     console.log('youppiii');
@@ -52,5 +55,10 @@ export class ProfilPage {
     //   .then(response => response.text())
     //   .then(result => console.log(result))
     //   .catch(error => console.log('error', error));
+  }
+
+  async logout() {
+    await this.authService.logout();
+    this.router.navigateByUrl('/', { replaceUrl: true });
   }
 }

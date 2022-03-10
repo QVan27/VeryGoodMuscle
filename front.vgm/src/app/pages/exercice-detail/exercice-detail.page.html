@@ -1,10 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>exercice-detail</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-
 <ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title id="exercice_name">Phase Échauffement</ion-card-title>
+    </ion-card-header>
 
+    <ion-card-content>
+      <img id="exercice_img" [src]="exercice_url" alt="" />
+      <p id="exercice_text">{{exercice_text}}</p>
+      <div class="wrapper">
+        <div class="timer"></div>
+        <div class="border"></div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-button color="danger" expand="full" [routerLink]="['/tabs/home']"
+    >Abandonner</ion-button
+  >
 </ion-content>
