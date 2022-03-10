@@ -31,4 +31,17 @@ export class UsersService {
       );
     });
   }
+
+  getById(id) {
+    return new Promise((resolve) => {
+      this.http.get(`${this.apiUrl}/${id}`, this.httpOptions).subscribe(
+        (data) => {
+          resolve(data);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    });
+  }
 }

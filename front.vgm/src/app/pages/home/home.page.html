@@ -6,7 +6,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <div class="header-title">Hello Cyril.</div>
+    <div class="header-title">Bonjour {{ user.data.first_name }}</div>
   </ion-header>
 
   <div class="push-days">
@@ -19,14 +19,15 @@
   <p class="home-date">Aujourd'hui</p>
 
   <div id="cards-container">
-
     <ion-card color="primary">
       <ion-card-header>
         <ion-card-subtitle
           ><ion-icon name="walk-outline" size="medium"></ion-icon
           >marche</ion-card-subtitle
         >
-        <ion-card-title>2,456 <span class="card-title__span">pas</span></ion-card-title>
+        <ion-card-title
+          >2,456 <span class="card-title__span">pas</span></ion-card-title
+        >
       </ion-card-header>
       <ion-card-content>
         <img src="../../../assets/images/square_up.svg" alt="" />
@@ -37,7 +38,9 @@
         <ion-card-subtitle
           ><ion-icon name="flame-outline"></ion-icon>calories</ion-card-subtitle
         >
-        <ion-card-title>2,456 <span class="card-title__span">cal</span></ion-card-title>
+        <ion-card-title
+          >2,456 <span class="card-title__span">cal</span></ion-card-title
+        >
       </ion-card-header>
       <ion-card-content>
         <img src="../../../assets/images/stat-up.svg" alt="" />
@@ -49,16 +52,17 @@
           ><ion-icon name="barbell-outline" size="medium"></ion-icon
           >sports</ion-card-subtitle
         >
-        <ion-card-title>20 <span class="card-title__span">ex</span></ion-card-title>
+        <ion-card-title
+          >20 <span class="card-title__span">ex</span></ion-card-title
+        >
       </ion-card-header>
       <ion-card-content>
         <img src="../../../assets/images/stretching.svg" alt="" />
       </ion-card-content>
     </ion-card>
-    
+
     <button>
       <ion-icon name="add-circle-outline"></ion-icon>
-
     </button>
   </div>
   <ion-button expand="full" (click)="logout()">Logout</ion-button>

@@ -9,13 +9,13 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () =>
       import('./components/tabs/tabs.module').then((m) => m.TabsPageModule),
-      canLoad: [AuthGuard]// Secure all child pages
+    canLoad: [AuthGuard], // Secure all child pages
   },
   {
     path: 'login',
     loadChildren: () =>
       import('./pages/login/login.module').then((m) => m.LoginPageModule),
-      canLoad: [IntroGuard, AutoLoginGuard]
+    canLoad: [IntroGuard, AutoLoginGuard],
   },
   {
     path: 'sign-up',
@@ -65,8 +65,8 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: '/login',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 @NgModule({
   imports: [

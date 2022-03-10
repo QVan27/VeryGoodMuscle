@@ -14,7 +14,7 @@ export class ProfilPage {
 
   id = '6213b3432d12baf306841b20';
 
-  constructor(public restProvider: UsersService) {
+  constructor(public userMethod: UsersService) {
     // @ts-ignore
     // this.getAllUsers();
   }
@@ -30,7 +30,7 @@ export class ProfilPage {
 
     //@ts-ignore
 
-    this.restProvider.getAllUsers().then((data) => {
+    this.userMethod.getAllUsers().then((data) => {
       this.allUsers = data;
       console.log(this.allUsers);
     });
