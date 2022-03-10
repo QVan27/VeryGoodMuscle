@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>programme</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <div class="header-title">Programme.</div>
+  </ion-header>
+  
+  <div id="cards-container">
+    <ul>
+      <li class="card">
+        <div class="card__flipper">
+          <div class="card__front">
+            <p class="card__name"><span>Niveau</span><br>Débutant</p>
+            <p class="card__num">*</p>
+            <p class="card__descript">Tu n'as jamais fait de sport ? ce niveau est fait pour toi !</p>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card__flipper">
+           <div class="card__front">
+             <p class="card__name"><span>Niveau</span><br>Intérmediaire</p>
+            <p class="card__num">* *</p>
+            <p class="card__descript">Tu as déja fait du sport ? ce niveau est fait pour toi !</p>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card__flipper">
+           <div class="card__front">
+            <p class="card__name"><span>Niveau</span><br>Confirmé</p>
+            <p class="card__num">* * *</p>
+            <p class="card__descript">Tu pratique du sport depuis longtemps ? ce niveau est fait pour toi !</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    
+  </div>
 </ion-content>
