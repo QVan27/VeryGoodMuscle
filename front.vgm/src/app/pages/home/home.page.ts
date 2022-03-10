@@ -9,11 +9,11 @@ import { UsersService } from '../../services/users.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  // user: any;
+  user: any;
   constructor(
     private authService: AuthenticationService,
     private router: Router,
-    // public userMethod: UsersService
+    public userMethod: UsersService
   ) {}
 
   async logout() {
@@ -21,10 +21,6 @@ export class HomePage {
     this.router.navigateByUrl('/', { replaceUrl: true });
   }
 
-  // ngOnInit() {
-  //   this.userMethod.getById(id).then((data) => {
-  //     this.user = data;
-  //     console.log(this.user);
-  //   });
-  // }
+  ngOnInit() {
+  }
 }
