@@ -14,6 +14,8 @@ export class UsersService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': 'true',
+      'Access-Control-Allow-Methods': 'POST,GET,PUT,DELETE',
     }),
   };
 

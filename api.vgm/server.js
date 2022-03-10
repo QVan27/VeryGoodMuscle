@@ -1,9 +1,10 @@
 const path = require("path");
 const express = require("express");
+const cors = require("cors");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const colors = require("colors");
-const cookieParser = require('cookie-parser');
+const cookieParser = require("cookie-parser");
 const errorHandler = require("./middleware/error");
 const connectDb = require("./config/db");
 
@@ -16,12 +17,14 @@ connectDb();
 //Route files
 const users = require("./routes/users");
 const exercices = require("./routes/exercices");
-const auth = require('./routes/auth');
+const auth = require("./routes/auth");
 
 const app = express();
 
 // Body parser
 app.use(express.json());
+
+app.use(cors());
 
 // Cookie parser
 app.use(cookieParser());
@@ -38,7 +41,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //Mout routers
 app.use("/api/v1/users", users);
 app.use("/api/v1/exercices", exercices);
-app.use('/api/v1/auth', auth);
+app.use("/api/v1/auth", auth);
 
 app.use(errorHandler);
 
